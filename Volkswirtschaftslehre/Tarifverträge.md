@@ -1,4 +1,4 @@
-# Tarifrecht
+# Tarifverträge
 von André Sommer am 21.07.2023
 
 Gewerkschaften + Arbeitgeberverband = Tarifvertrag
