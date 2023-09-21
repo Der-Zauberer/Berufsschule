@@ -3,6 +3,8 @@ von André Sommer am 21.07.2023
 
 Gewerkschaften + Arbeitgeberverband = Tarifvertrag
 
+Gewerkschaft + Arbeitgeber = Haustarifvertrag
+
 ## Tarifautonomie
 Tarifverhandlungen und Einigungen geschehen unabhängig von politischem Einfluss.
 
@@ -22,6 +24,9 @@ Festlegung der Arbeitsbedingungen (Einstellungen, Kündigungen, Arbeitszeiten, Z
 
 ### Firmentarifvertrag / Werktarifvertrag
 Gültigkeit für Firmen, die nicht in einem Arbeitgeberverband organisiert sind und trozdem eine Vereibahrung haben
+
+## Friedenspflicht
+Während der Laufzeit eines Tarifvertrages darf nicht gestreikt werden.
 
 ## Vorteile und Nachteile eines Streiks
 
