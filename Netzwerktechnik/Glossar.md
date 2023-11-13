@@ -7,6 +7,12 @@ ARP wird verwendet um IP-Adressen den MAC-Adressen in einem Netzwerk zuordnen zu
 ### CAT
 Steht für Category (zu deutsch Güteklassen) und bezeichnet verschiedenen Qualitätsstandarts für Ethernetkabel.
 
+### CSMA/CA  (Carrier Sense Multible Access with Collision Avoidance)
+Teilnehmer in einem Netz hören mit um zu warten, bis die Leitung frei ist (Carrier Sense). Erst wenn die Leitung Frei ist wird ein RTS (Request to Send gestellt). Der Empfänger bestätigt mit CLS (Clear to Send). Wenn die Sendung abgeschlossen ist wird ein ACK (Acknowlege) gesendet um den anderen Teilnehmern mitzuteilen das die Leitung wieder für RTS frei ist.
+
+### CSMA/CD (Carrier Sense Multible Access with Collision Detection)
+Teilnehmer in einem Netz hören mit um zu warten, bis die Leitung frei ist (Carrier Sense). Erst wenn die Leitung Frei ist wird gesendet. Sollten zwei Teilnehmer gleichzeitig anfangen zu senden wird ein Jam-Signal gesendet um teilnehmern mitzuteilen, dass es zu einer Kollision kam. Die Kollision wird erkannt, weil beim Senden weiterhin mitgehört wird um den Input mit den Dtaneströmen auf der Leitung zu validieren. Nach dem Jamsignal warten die Teilnehmer eine zufällige Zeit um eine erneute Kollision zu vermeiden bevor sie mit dem Senden fortfahren.
+
 ### DHCP (Dynamic Host Configuration Protocol)
 Durch DHCP können Geräte im Netwerk automatisch IP-Adressen beziehen. Dazu sendet ein Endgerät eine Broadcastanfrage an den DHCP Server. Dieser antwortet dann im Broadcast mit der IP-Adresse und der dazugehörigen Subnetzmaske. Das Endgerät bestätigt per Boradcast diese Zuweisung. Die Nachrichten werden per Broadcast gesendet, um sicherzustellen, dass die Zuweisung nicht zu Problemen mit anderem Geräten im Netwerk führt, da die anderen Endgeräte mitlesen und intervinieren können.
 
