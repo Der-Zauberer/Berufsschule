@@ -34,6 +34,9 @@ Die IP-Adresse ist eine eindeutige Adresse auf Layer-3, mit denen sich Geräte z
 ### NAT (Network Address Translation)
 Ein Layer-3 fähiges Gerät (z.B. Router) vollzieht eine Network Address Translation um IPv4-Adressen zwischen privaten und öffentlichen Netzwerken zu übersetzen und Pakete weiterzuleiten. NAT wird nur unter IPv4 verwendet.
 
+### OSI (Open Systems Interconnection)
+Das ISO-OSI Schichtenmodell vereinheitlicht die Übertragung von Daten in einem Netzwerk.
+
 ### QoS (Quality of Service)
 Quality of Service sorgt für eine Qualitätsgesicherte Kommunikation im Netzwerk. Es gibt Beispielsweise Parameter vor, mit der Datenpakete bevorzugt behandelt werden und gesendet werden um die Latenz zu veringern, zum Beispiel in der VoIP Telefinie.
 
@@ -54,3 +57,9 @@ Telnet ist ein unverschlüsseltes Protokoll auf der Anwendungsschicht. Mit ihm k
 
 ### UDP (User Datagram Protocol)
 UTP arbeitet auf Layer-4 und wird für schnelle Datenkommunikation eingesetzt, bei der Verlusste oder die falsche Reihenfolge von Packeten in kauf genommen wird, weil auf keine Bestätigung gewartet wird.
+
+### VLAN (Virtual Local Area Network)
+VLAN erlaubt das Aufteilen eines Netzwerkes in virtuelle kleinere Netzwerke bei physisch zusammengefassten Netzwerkteilnehmern.
+
+### VPN (Virtual Private Network)
+VPN stellt eine sichere Verbindung von einem Netzwerk in ein anderes Netzwerk als Teilnehmer her. Dies kann den Zugriff auf Netzwerkinterne Resourcen ermöglichen oder die sichere Datenkommunikation in einem unsicherem Netzwerk durch das umleiten der Daten in das Zielnetzwerk ermöglichen.

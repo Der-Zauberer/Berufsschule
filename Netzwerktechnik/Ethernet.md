@@ -75,7 +75,7 @@ In der TCP/IP Schichtenarchitektur werden die Schichten `Presentation Layer` und
 
 |Frame (Ramen)|Packets (Pakete)|Segments (Segmente)|Messages (Nachrichten)||
 |---|---|---|---|---|
-|Header Sicherungsschicht|Header Vermittlungsschicht|Header Transportschicht|Daten der Anwendungsschicht|Trailer|
+|Header Host-to-Net Layer|Header Network Layer|Header Transport Layer|Daten der Anwendungsschicht|Trailer|
 
 ## Netzwerkverbindung
 
