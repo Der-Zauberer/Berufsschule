@@ -1,4 +1,4 @@
-# Ethernet
+# IPv6
 von André Sommer am 05.12.2023
 
 ## Aufbau
