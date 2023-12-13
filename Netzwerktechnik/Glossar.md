@@ -50,7 +50,7 @@ Das SIP dient zum Kommunikationsaufbau für Multimedia-Datenströme wie Audio un
 Die Secure Shell ist ein Protokoll auf Anwendungsschicht und läuft standardmäßig auf dem Port 22. Mit ihr können Konsolen über das Netzwerk ferngesteuert werden. Die Verbindung erfolgt außerdem verschlüsselt.
 
 ### TCP (Transmission Control Protocol)
-TCP arbeitet auf Layer-4 und stellt sicher, dass gesendete Daten auch angekommen sind und dies in der richtigen reihenfolge geschehen ist.
+TCP arbeitet auf Layer-4 und stellt sicher, dass gesendete Daten angekommen sind und dies in der richtigen Reihenfolge geschehen ist.
 
 ### Telnet
 Telnet ist ein unverschlüsseltes Protokoll auf der Anwendungsschicht. Mit ihm können Konsolen über das Netzwerk ferngesteuert werden, der Standardport ist hierbei 23.
