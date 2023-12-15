@@ -1,7 +1,7 @@
 # Glossar
 von André Sommer am 18.10.2023
 
-### ARP (Address Resulution Protocol)
+### ARP (Address Resolution Protocol)
 ARP wird verwendet um IP-Adressen den MAC-Adressen in einem Netzwerk zuordnen zu können und somit auf IP-Basis Geräte ansprechen zu können. Die Zuordnung wird in einer Tabelle eines Layer-2 fähigen Gerätes (z.B. Switch) hinterlegt. Das Gerät sendet ARP-Anfragen als Broadcast an Endgeräte im Netzwerk um eine bestimmte IP-Adresse zu suchen. Das betroffene Endgerät antwortet dann mit seiner IP-Adresse.
 
 ### CAT
