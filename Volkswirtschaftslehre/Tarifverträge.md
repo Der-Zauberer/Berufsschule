@@ -61,3 +61,18 @@ Während der Laufzeit eines Tarifvertrages darf nicht gestreikt werden.
 ### Wilder Streik
 **Betroffen:** Spontaner Streik der Belegschaft ohne Beschluss der Gewerkschaften und ohne Urabstimmung<br>
 **Ziel:** Reaktion auf spontane Änderung der Arbeitsbedingungen welche zurückgenommen werden sollen
+
+## Zustande kommen eines Tarifvertrages
+
+1. Verhandlungen zwischen Arbeitgeberverband und Gewerkschaft (Warnstreiks möglich) (Einigung bei 8. möglich)
+2. (Optional) Schlichtung mit einem unparteiischen und unabhängigen Schlichter (Einigung 8. möglich)
+3. Erklärung des Scheiterns
+4. Erste Urabstimmung berechtigt zum Unbefristeten Streik, wenn mehr als 75% der Gewerkschaftsmitglieder zustimmen (Bei scheitern zurück zu 1. oder 2.)
+5. Streik
+    - Arbeitsverhältnisse Ruhen
+    - Kein Anspruch auf Lohn
+    - Streikgeld für Gewerkschaftsmitglieder bei aktiver Streikbeteiligung
+    - Mögliche Aussperrung durch Arbeitgeber um Lohnfortzahlung zu verhindern
+6. Neue Verhandlung
+7. Zweite Urabstimmung bestimmt Streikende und Annahme des Tarifvertrages bei mehr als 25% Zustimmung der Gewerkschaftsmitglieder (Bei scheitern zurück zu 5.)
+8. Einigung
