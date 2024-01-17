@@ -50,7 +50,7 @@ Während der Laufzeit eines Tarifvertrages darf nicht gestreikt werden.
 **Betroffen:** Alle Arbeitnehmer eines Wirtschaftszweiges<br>
 **Ziel:** Durchsetzung von Forderungen und zwingen der Rückkehr zum Verhandlungstisch der Arbeitgeber
 
-### Schwehrpunktstreik
+### Schwerpunktstreik
 **Betroffen:** Bestreiken von wichtigen Teilen (zB. Zulieferung)<br>
 **Ziel:** Ausübung von starkem Druck ohne Finanzierung eines Vollstreiks
 
