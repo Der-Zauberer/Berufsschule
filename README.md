@@ -4,6 +4,6 @@ Die Zusammenfassungen dienen der Vorbereitung für die Abschlussprüfung 2025 un
 
 Ich übernehme keine Haftung für Vollständigkeit und Richtigkeit der Zusammenfassung.
 
-Gerne darf ein Pull-Reqeust gestellt werden, wenn Anpassungsvorschläge oder Ergänzungen gibt.
+Gerne darf ein Pull-Reqeust gestellt werden, wenn es Anpassungsvorschläge oder Ergänzungen gibt.
 
-Gerne dürfen die Inhalte unter Beachtung des Haftungsausschlusses von dritten ohne weitere Einschränkungen und Namensnennung weiterverwendet und weiterverarbeitet werden.
+Gerne dürfen die Inhalte unter Beachtung des Haftungsausschlusses von dritten ohne weitere Einschränkungen und ohne Namensnennung weiterverwendet und weiterverarbeitet werden.
