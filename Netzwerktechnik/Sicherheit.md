@@ -44,6 +44,31 @@ Beim Hashing kann nur Verschlüsselt werden, es gibt keine Möglichkeit die Nach
 - **Passwort-Manager:** Ein Verwaltungsprogramm für Passwörter um möglichst für jeden Dienst ein anderes Passwort zu verwenden ohne sich die Passwörter merken zu müssen.
 - **Zwei-Faktor-Authentifikation (2FA):** Es müssen zur Authentisierung zwei der drei Faktoren Wissen (zB. Passwort), Identität (zb. Fingerabdruck), Besitz(z.B Mobiltelefon) zum anmelden benutzt werden. Dies geschieht meist über eine extra App, welche Zeitgebundene Anmeldecodes ausgibt.
 
+## Firewall
+Eine Firewall ist ein System (Server oder Router), welches in der Lage ist Netwerkverkehr zu analysieren und gegebenenfalls zu sperren. Für das Sperren gibt es verschiedene Strategien:
+- Alles erlauben und nur verdächtiges sperren
+- Alles verbieten und nur bekannten erlauben
+
+### Funktionskomponenten
+- Packetfilter
+- Stateful Packet Inspection
+- Deep Packet Inspection
+- URL-Filter
+- VPN
+- Content-Filter
+- Network Address Translation
+- Proxyfunktion (Häufige Seiten werden gecached)
+- Passwortsicherrung
+- Virenscanner
+
+### Filterung
+- **Packetfilter:** Überprüft stateless TCP und IP Header.
+- **Stateful Packet Inspection (SPI):** Überprüft ob es mit bisherigen Verbindungen zu Mustern bei den TPC und IP Headern kommt.
+- **Circuit-Level Gateway:**  Überprüft bei aufrecht erhaltenen Verbindungen nur bei der Verbindungsherstellung
+- **Deep Packet Inspection (DPI):** Überprüft auch den Inhalt von TCP Segmente
+- **Application Gateway:** Arbeitet als Proxy und filtert so den Inhalt von Vverbidnungen
+- **Next Generation Firewalls:** Überprüft auch Zertifikate und nach Malwaremuster
+
 ## Schutzbedarf
 Hierbei wird analysiert, wie schutzbedürftig ein Unternehmen ist beziehungsweise was passiert, wenn die VIVA Zielobjekte verletzt werden. Um dies zu verhindern gibt es Sicherheitsrichtlinien (Security Policy). Sie muss von allen Mitarbeitern des Unternehmens zur Kenntniss genommen werden, eine Verletzung wird sanktioniert und kann durch die DSGVO je nach schwere zu empfindlichen Geldbusen und selbst zu Haftaststrafen frühen.
 
@@ -84,11 +109,40 @@ Dieses Prinzip verbindet alle Backupstrategien miteinander um eine optimale Bala
 - Differenzielle Sicherung am Wochenende (seit letzter Vollsicherung)
 - Inkrementelle Sicherung am Tagesende (seit letzter inkrementelle Sicherung)
 
-## RAID
-TODO
+## RAID (Redundant Array of Independent Disks)
+Ein RAID ist ein Verbund von Festplatten in denen ein Speicherbereich sich über mehrere Festplatten erstrecken kann oder gespiegelt wird. Das Spiegeln dient dem Schutz vor Datenverlust bei fehlerhaftem schreiben oder dem Ableben der Festplatte. Aufgrund der Spiegelung ist ein RAID aber keine Backuplösung, da die Daten bei Beschädigung aller Spiegelinstanzen verloren gehen und versehentliche Änderungen automatisch gespiegelt werden. 
 
-## USV
-TODO
+|Software-RAID|Hardware-RAID|
+|---|---|
+|Wird vom Betriebssystem verwaltet und benötigt daher zusätzliche Resourcen|Wird von einem Resourcenunabhängigen RAID-Controller verwaltet zum Beispiel als DAS (Direct Attached Storage) oder als NAS (Network Attached Storage)|
 
-## Netzwerksicherheit
-TODO
+Die Daten werden in Stripes (Blöcke) zerlegt, der Striping-Factor gibt die Blockgröße an.
+
+|Bezeichnung|Beschreibung|Eigernschaften|
+|---|---|---|
+|RAID Level 0 (Data Striping)|Verbund mehrerer Platten|Min 2 Platten, niedrig|
+|RAID Level 1 (Drive Monitoring)|Parität mehrerer Platten|Min 2 Platten, hoch|
+|RAID Level 10|Kombination von RAID 0 und RAID 1 mit zwei Platten die jeweils auf zwei weiteren parätiert werden|Min 4 Platten, hoch|
+|RAID Level 5|Matrixbetrieb durch Verteilung der Daten auf mehreren Platten und Parität auf jeweils nicht verwendeter Platte|Min 3 Platten, mittel|
+|RAID Level 6|Matrixbetrieb durch Verteilung der Daten auf mehreren Platten und Parität auf jeweils zwei nicht verwendeter Platten|Min 4 Platten, hoch|
+|Matrix RAID|Kombination von RAID 0 und RAID 1 mit zwei Platten mit jeweils zwei Partitionen die|Min 2 Platten|
+
+Als Matrix RAID wird ein RAID bezeichnet, welcher auf einer Platte sowohl eine Datenpartition als auch eine Paritätspartition hat. Damit kann auf einer Platte eine Sicherung einer jeweils anderen Platte mit Datenpartition vorgenommen werden.
+
+Hostspare sind Reservefestplatten zum schnellen Austausch im laufendem Betrieb.
+
+## Unterbrechungsfreie Stromversorgung
+Die USV kommt zum Einsatz, wenn durch mangelnde Spannungsqualität die Wiederherstellung des ausgefallenen sehr Kostenintensiv ist, Datenverlust oder Gefahr für Leib und Leben droht. Mangelnde Spannungsqualität kann durch Rauschen, Überspannung, Unterspannung und Spannungsspitzen sowie Totalausfall verursacht werden. Die USV dient also zur Verbesserung der Spannungsqualität und zur Weiterversorgung trotz Totalausfall.
+
+### USV Arten
+- **Standby- oder Offline USV:** Im Notfall betrieb durch Akkumulator *(VFD - Voltage and Frequency Dependent)*
+- **Netzinteraktive USV:** Im Notfall betrieb durch Akkumulator sonst nur automatischer Spannungsregler *(VI - Voltage Independent)*
+- **Online USV:** Immer Betrieb durch Akkumulator (Keine Umschaltzeit) *(VFI - Voltage and Frequency Independent)*
+
+||VFD|VI|VFI|
+|---|---|---|---|
+|Leistung|bis 1kVA|bis 5kVA|ab 500 VA|
+|Wirkungsgrad|95%|95% - 98%|90%|
+|Preis|niedrig|mittel|hoch|
+|Anwendung|Kleine Verbraucher|Einzelne Verbraucher|Server und Datenkommuniokation|
+|Umschaltdauer|4ms - 10 ms|2ms - 4ms| / |
