@@ -66,17 +66,17 @@ Die Reihenfolge bei SQL-Abfragen ist immer `SELECT` `FROM` `WHERE` `GROUP BY` `H
 
 ```sql
 -- Spalten für Ergebnistabellen auswählen
-SELECT P.Name, P.Datum, L.Name, avg(N.Note) AS Notendurchschnitt
+SELECT S.name, S.datum, L.name, avg(N.Note) AS notendurchschnitt
 -- Tabellen auswählen, von dem die Spalten verwendet werden
-FROM Person P, Noten N, Lehrer L
+FROM Schueler S, Noten N, Lehrer L
 -- Verknüpfungen der Tabellen definieren
-WHERE P.Lehrer = L.ID
+WHERE S.lehrer = L.id
 -- Nach allen Spalten gruppieren, die keine Aggregatsfunktion sind
-GROUP BY P.Name, P.Datum, L.Name
+GROUP BY S.name, S.datum, L.name
 -- Nach dem Ergebnis von Aggregatsfunktionen filtern
-HAVING avg(N.Note) > 3
+HAVING avg(N.note) > 3
 -- Nach Spalten sortieren
-ORDER BY avg(N.Note) ASC
+ORDER BY avg(N.note) ASC
 ```
 
 ### SELECT
@@ -143,8 +143,23 @@ Datensätze können nach einer oder mehreren Spalten sortiert werden. Wenn der W
 |RIGHT OUTER JOIN|Nullable* Join mit Nullables von der linken Spalte|`FROM Kunde RIGHT OUTER JOIN Auftrag ON Kunde.auftrags_id = Auftrag.id`|
 |FULL OUTER JOIN|Nullable* Join mit Nullables von beiden Spalten|`FROM Kunde FULL OUTER JOIN Auftrag ON Kunde.auftrags_id = Auftrag.id`|
 
-- ***Nullsave:** TODO
-- ***Nullable:** TODO
+- ***Nullsave:** Wenn der Fremdschlüssel null ist und somit auf keine andere Entität referenziert wird der Join nicht gelistet
+- ***Nullable:** Der Join wird auch ohne gefüllten Fremdschlüssel aufgeführt, die leere Entität ist jeweils auf der anderen Seite des Basis-Outer-Joins
 
 ### Subselects
-TODO
+
+Subselects werden ein Mal gebündelt ausgeführt und die Antwort wird zwischengespeichert, so kann eine Abfrage mit Subselects je nach Anwendungsfall performater sein als ein einziger Select.
+
+Äußere Tabellendeklarationen sind für die Subselects gültig. Subselects können für einen oder mehrere Ergebniszeilen verwendet werden.
+
+```sql
+-- Beispiel für ein Subselect im SELECT (Anzahl der Schüler pro Lehrer)
+SELECT id, (SELECT count(id) AS schueler FROM Schueler WHERE lehrer = Lehrer.id) FROM Lehrer;
+
+-- Beispiel für ein Subselect im WHERE (Nur Lehrer, die Schüler haben)
+SELECT id FROM Lehrer WHERE id IN (SELECT lehrer FROM Schueler);
+
+-- Beispiel für ein Subselect im WHERE (Nur Schüler, die die beste Note haben)
+SELECT id FROM Schueler WHERE note = (SELECT max(note) FROM Schueler);
+```
+
