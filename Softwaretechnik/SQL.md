@@ -39,7 +39,7 @@ ALTER TABLE Kunde RENAME COLUMN name to vorname;
 DROP TABLE Kunde;
 ```
 
-## Data Query Language (DQL)
+## Data Manipulation Language (DML)
 
 ### Anlegen mit INSERT
 ```sql
