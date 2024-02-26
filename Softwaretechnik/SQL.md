@@ -8,7 +8,7 @@ André Sommer am 01.02.2024
 - **Data Data Manipulation Language (DML):** Verändert Daten in der Datenbank
 - **Data Query Language (DQL):** Erfragt und liest Daten aus der Datenbank
 - **Data Administration Language (DAL):** Verwaltet Benutzer und deren Rechte
-- **Trabsaction Control Language (TCL):** Stellt Datenintegrität sicher in dem Anweisungen ganz oder gar nicht ausgeführt werden.
+- **Transaction Control Language (TCL):** Stellt Datenintegrität sicher in dem Anweisungen ganz oder gar nicht ausgeführt werden.
 
 ## Data Definition Language (DDL)
 
@@ -136,15 +136,15 @@ Datensätze können nach einer oder mehreren Spalten sortiert werden. Wenn der W
 
 |Abfragetyp|Funktion|Funktion und Syntax|
 |---|---|---|
-|CROSS-JOIN|kertesisches Produkt|`FROM Kunde CROSS JOIN Auftrag`|
+|CROSS-JOIN|kartesisches Produkt|`FROM Kunde CROSS JOIN Auftrag`|
 |EQUI-JOIN|Nullsave* Join|`WHERE Kunde.auftrags_id = Auftrag.id`|
 |INNER JOIN|Nullsave* Join|`FROM Kunde INNER JOIN Auftrag ON Kunde.auftrags_id = Auftrag.id`|
-|LEFT OUTER JOIN|Nullable* Join mit Nullables von der rechten Spalte|`FROM Kunde LEFT OUTER JOIN Auftrag ON Kunde.auftrags_id = Auftrag.id`|
-|RIGHT OUTER JOIN|Nullable* Join mit Nullables von der linken Spalte|`FROM Kunde RIGHT OUTER JOIN Auftrag ON Kunde.auftrags_id = Auftrag.id`|
-|FULL OUTER JOIN|Nullable* Join mit Nullables von beiden Spalten|`FROM Kunde FULL OUTER JOIN Auftrag ON Kunde.auftrags_id = Auftrag.id`|
+|LEFT OUTER JOIN|Nullable* Join mit Nullables von der rechten Entität|`FROM Kunde LEFT OUTER JOIN Auftrag ON Kunde.auftrags_id = Auftrag.id`|
+|RIGHT OUTER JOIN|Nullable* Join mit Nullables von der linken Entität|`FROM Kunde RIGHT OUTER JOIN Auftrag ON Kunde.auftrags_id = Auftrag.id`|
+|FULL OUTER JOIN|Nullable* Join mit Nullables von beiden Entität|`FROM Kunde FULL OUTER JOIN Auftrag ON Kunde.auftrags_id = Auftrag.id`|
 
-- ***Nullsave:** Wenn der Fremdschlüssel null ist und somit auf keine andere Entität referenziert wird der Join nicht gelistet
-- ***Nullable:** Der Join wird auch ohne gefüllten Fremdschlüssel aufgeführt, die leere Entität ist jeweils auf der anderen Seite des Basis-Outer-Joins
+- **Nullsave:** Wenn der Fremdschlüssel null ist und somit auf keine andere Entität referenziert wird der Join nicht gelistet
+- **Nullable:** Der Join wird auch ohne gefüllten Fremdschlüssel aufgeführt, die leere Entität ist jeweils auf der anderen Seite des Basis-Outer-Joins
 
 ### Subselects
 
