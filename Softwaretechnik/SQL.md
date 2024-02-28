@@ -16,7 +16,7 @@ André Sommer am 01.02.2024
 ```sql
 -- Tabelle "Kunde" mit Spalten "id" und "name" erstellen
 CREATE TABLE Kunde (
-    id INT NOT NULL AUTO INKREMENT,
+    id INT NOT NULL AUTO INCREMENT,
     name TEXT NOT NULL
 );
 ```
