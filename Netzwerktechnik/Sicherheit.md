@@ -4,7 +4,7 @@ von André Sommer am 01.02.2024
 Unter IT-Sicherheit versteht man im Allgemeinen den Schutz von Daten. Dabei geht es zum einem um den Schutz vor fremden Zugriff aber auch den Schutz vor Datenverlust.
 
 ## Bundesamt für Sicherheit und Informationstechnik (BSI)
-Das BSI wurde von der Bundesregierung  1991 mit dem "Gesetzes über die Errichtung des Bundesamtes für Informationstechnik" geschaffen. Es hat drei Aufgben:
+Das BSI wurde von der Bundesregierung  1991 mit dem "Gesetzes über die Errichtung des Bundesamtes für Informationstechnik" geschaffen. Es hat drei Aufgaben:
 - Gewährleistung der Sicherheit für das Regierungsnetz
 - Gewährleistung der Sicherheit für kritische Infrastruktur
 - Warnung der Bevölkerung vor Sicherheitslücken
@@ -45,12 +45,12 @@ Beim Hashing kann nur Verschlüsselt werden, es gibt keine Möglichkeit die Nach
 - **Zwei-Faktor-Authentifikation (2FA):** Es müssen zur Authentisierung zwei der drei Faktoren Wissen (zB. Passwort), Identität (zb. Fingerabdruck), Besitz(z.B Mobiltelefon) zum anmelden benutzt werden. Dies geschieht meist über eine extra App, welche Zeitgebundene Anmeldecodes ausgibt.
 
 ## Firewall
-Eine Firewall ist ein System (Server oder Router), welches in der Lage ist Netwerkverkehr zu analysieren und gegebenenfalls zu sperren. Für das Sperren gibt es verschiedene Strategien:
+Eine Firewall ist ein System (Server oder Router), welches in der Lage ist Netzwerkverkehr zu analysieren und gegebenenfalls zu sperren. Für das Sperren gibt es verschiedene Strategien:
 - Alles erlauben und nur verdächtiges sperren
 - Alles verbieten und nur bekannten erlauben
 
 ### Funktionskomponenten
-- Packetfilter
+- Paketfilter
 - Stateful Packet Inspection
 - Deep Packet Inspection
 - URL-Filter
@@ -62,15 +62,15 @@ Eine Firewall ist ein System (Server oder Router), welches in der Lage ist Netwe
 - Virenscanner
 
 ### Filterung
-- **Packetfilter:** Überprüft stateless TCP und IP Header.
+- **Paketfilter:** Überprüft stateless TCP und IP Header.
 - **Stateful Packet Inspection (SPI):** Überprüft ob es mit bisherigen Verbindungen zu Mustern bei den TPC und IP Headern kommt.
 - **Circuit-Level Gateway:**  Überprüft bei aufrecht erhaltenen Verbindungen nur bei der Verbindungsherstellung
 - **Deep Packet Inspection (DPI):** Überprüft auch den Inhalt von TCP Segmente
-- **Application Gateway:** Arbeitet als Proxy und filtert so den Inhalt von Vverbidnungen
+- **Application Gateway:** Arbeitet als Proxy und filtert so den Inhalt von Verbindungen
 - **Next Generation Firewalls:** Überprüft auch Zertifikate und nach Malwaremuster
 
 ## Schutzbedarf
-Hierbei wird analysiert, wie schutzbedürftig ein Unternehmen ist beziehungsweise was passiert, wenn die VIVA Zielobjekte verletzt werden. Um dies zu verhindern gibt es Sicherheitsrichtlinien (Security Policy). Sie muss von allen Mitarbeitern des Unternehmens zur Kenntniss genommen werden, eine Verletzung wird sanktioniert und kann durch die DSGVO je nach schwere zu empfindlichen Geldbusen und selbst zu Haftaststrafen frühen.
+Hierbei wird analysiert, wie schutzbedürftig ein Unternehmen ist beziehungsweise was passiert, wenn die VIVA Zielobjekte verletzt werden. Um dies zu verhindern gibt es Sicherheitsrichtlinien (Security Policy). Sie muss von allen Mitarbeitern des Unternehmens zur Kenntnis genommen werden, eine Verletzung wird sanktioniert und kann durch die DSGVO je nach schwere zu empfindlichen Geldbusen und selbst zu Haftaststrafen frühen.
 
 Die Schutzbedürftigkeit wird in drei Kategorien angegeben:
 - **Normal: die Schadensauswirkungen sind begrenzt und überschaubar**
@@ -103,7 +103,7 @@ Eine Sicherung, die alle Änderungen sichert, die seit der letzten Vollsicherung
 ### Inkrementelle Sicherung
 Eine Sicherung die alle Daten seit der letzten inkrementellen Sicherung oder Vollsicherung falls nicht vorhanden sichert. Diese Sicherung ist durch die Inkrementierungen am wenigsten Rechen- und Speicherintensiv. Eine Wiederherstellung der Daten benötigt aber die Vollsicherung und jede einzelne inkrementelle Sicherung, was die Wiederherstellung in diesem Fall rechenintensiver und aufwändiger macht.
 
-### Großfater Vater Sohn Prinzip
+### Großvater Vater Sohn Prinzip
 Dieses Prinzip verbindet alle Backupstrategien miteinander um eine optimale Balance aus Rechen- und Speicherintensität zu erreichen. Sie kann folgendermaßen ablaufen:
 - Vollsicherung am Monatsanfang
 - Differenzielle Sicherung am Wochenende (seit letzter Vollsicherung)
@@ -114,11 +114,11 @@ Ein RAID ist ein Verbund von Festplatten in denen ein Speicherbereich sich über
 
 |Software-RAID|Hardware-RAID|
 |---|---|
-|Wird vom Betriebssystem verwaltet und benötigt daher zusätzliche Resourcen|Wird von einem Resourcenunabhängigen RAID-Controller verwaltet zum Beispiel als DAS (Direct Attached Storage) oder als NAS (Network Attached Storage)|
+|Wird vom Betriebssystem verwaltet und benötigt daher zusätzliche Ressourcen|Wird von einem Ressourcenunabhängigen RAID-Controller verwaltet zum Beispiel als DAS (Direct Attached Storage) oder als NAS (Network Attached Storage)|
 
 Die Daten werden in Stripes (Blöcke) zerlegt, der Striping-Factor gibt die Blockgröße an.
 
-|Bezeichnung|Beschreibung|Eigernschaften|
+|Bezeichnung|Beschreibung|Eigenschaften|
 |---|---|---|
 |RAID Level 0 (Data Striping)|Verbund mehrerer Platten|Min 2 Platten, niedrig|
 |RAID Level 1 (Drive Monitoring)|Parität mehrerer Platten|Min 2 Platten, hoch|
