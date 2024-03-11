@@ -16,7 +16,7 @@ André Sommer am 01.02.2024
 ```sql
 -- Tabelle "Kunde" mit Spalten "id" und "name" erstellen
 CREATE TABLE Kunde (
-    id INT NOT NULL AUTO INKREMENT,
+    id INT NOT NULL AUTO INCREMENT,
     name TEXT NOT NULL
 );
 ```
@@ -137,13 +137,13 @@ Datensätze können nach einer oder mehreren Spalten sortiert werden. Wenn der W
 |Abfragetyp|Funktion|Funktion und Syntax|
 |---|---|---|
 |CROSS-JOIN|kartesisches Produkt|`FROM Kunde CROSS JOIN Auftrag`|
-|EQUI-JOIN|Nullsave* Join|`WHERE Kunde.auftrags_id = Auftrag.id`|
-|INNER JOIN|Nullsave* Join|`FROM Kunde INNER JOIN Auftrag ON Kunde.auftrags_id = Auftrag.id`|
+|EQUI-JOIN|Nullsafe* Join|`WHERE Kunde.auftrags_id = Auftrag.id`|
+|INNER JOIN|Nullsafe* Join|`FROM Kunde INNER JOIN Auftrag ON Kunde.auftrags_id = Auftrag.id`|
 |LEFT OUTER JOIN|Nullable* Join mit Nullables von der rechten Entität|`FROM Kunde LEFT OUTER JOIN Auftrag ON Kunde.auftrags_id = Auftrag.id`|
 |RIGHT OUTER JOIN|Nullable* Join mit Nullables von der linken Entität|`FROM Kunde RIGHT OUTER JOIN Auftrag ON Kunde.auftrags_id = Auftrag.id`|
 |FULL OUTER JOIN|Nullable* Join mit Nullables von beiden Entität|`FROM Kunde FULL OUTER JOIN Auftrag ON Kunde.auftrags_id = Auftrag.id`|
 
-- **Nullsave:** Wenn der Fremdschlüssel null ist und somit auf keine andere Entität referenziert wird der Join nicht gelistet
+- **Nullsafe:** Wenn der Fremdschlüssel null ist und somit auf keine andere Entität referenziert wird der Join nicht gelistet
 - **Nullable:** Der Join wird auch ohne gefüllten Fremdschlüssel aufgeführt, die leere Entität ist jeweils auf der anderen Seite des Basis-Outer-Joins
 
 ### Subselects
