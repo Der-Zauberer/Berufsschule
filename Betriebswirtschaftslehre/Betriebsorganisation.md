@@ -9,13 +9,13 @@ von André Sommer am 04.03.2024
 
 |Aufbauorganisation|Ablauforganisation|
 |---|---|
-|Festlegung der Unternehmensstruktur und Herarchien|Festlegung der Arbeitsmittel und Arbeitsabläufe|
+|Festlegung der Unternehmensstruktur und Hierarchien|Festlegung der Arbeitsmittel und Arbeitsabläufe|
 
 ## Stellenildung
 
 - **ausführende Stelle:** Stelle ohne Leitungsfunktion
 - **Instanz, Linienstelle:** Stelle mit Weisungsbefugnis
-- **Stabstelle:** Vorbereitungen von Entscheidungen ohne Befugnis
+- **Stabsstelle:** Vorbereitungen von Entscheidungen ohne Befugnis
 - **Verrichtungsprinzip:** Zusammenfassen gleicher Arbeiten
 - **Objektprinzip:** Zusammenfassen gleicher Arbeitsgegenstände
 
@@ -25,7 +25,7 @@ Abteilungen können nach Objekten und Verrichtungen gruppiert werden.
 
 ### Einlinienorganisation
 
-Jeder Mitarbeiter hat genau einen Vorgesetzten, kann anch Funktionsbereich und Produktbereich geordnet sein.
+Jeder Mitarbeiter hat genau einen Vorgesetzten, kann nach Funktionsbereich und Produktbereich geordnet sein.
 
 Vorteile:
 - übersichtliche Struktur
@@ -35,8 +35,8 @@ Vorteile:
 Nachteile:
 - lange Dienstwege
 - unnötige Belastung von Zwischeninstanzen
-- hoher zeitverlusst
-- erschwehrte Zusammenarbeit
+- hoher Zeitverlust
+- erschwerte Zusammenarbeit
 
 ### Mehrlinienorganisation
 
@@ -44,8 +44,8 @@ Jeder Mitarbeiter hat Vorgesetzte für verschiedene Kompetenzbereiche.
 
 Vorteile:
 - direkte Anweisungen
-- vereinfachte Mitarbeiterkontroller
-- entlasstung der Geschäftsführung
+- vereinfachte Mitarbeiterkontrolle
+- Entlastung der Geschäftsführung
 
 Nachteile:
 - komplexe Struktur
@@ -63,8 +63,8 @@ Vorteile:
 
 Nachteile:
 - hohe Konfliktgefahr
-- schwierigkeiten bei Akzeptanz der Stäbe
-- Maipulationsgefahr durch Stäbe
+- Schwierigkeiten bei Akzeptanz der Stäbe
+- Manipulationsgefahr durch Stäbe
 
 ### Matrixorganisation
 
