@@ -92,6 +92,12 @@ Der mögliche Schaden sich außerdem nach:
 - Negative Innen- und Außenwirkung
 - Finanzielle Auswirkungen
 
+Vererbung von Schutzbedarf:
+- **Maximalprinzip:** Der höchste Schutzbedarf aller Anwendungen
+- **Betrachtung von Abhängigkeiten:** Schutzbedarf überträgt sich auf Abhängigkeiten
+- **Kumulationseffekt:** Der Schutzbedarf aller Anwendungen als Verbund kann höher sein als die Anwendungen einzeln beanspruchen
+- **Verteilungseffekt:** Verteilung einer Anwendung mit Schutzbedarf sorgt für ein verteilteres Risiko
+
 ## Backup
 
 ### Vollsicherung
