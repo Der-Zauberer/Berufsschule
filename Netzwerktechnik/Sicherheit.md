@@ -146,3 +146,9 @@ Die USV kommt zum Einsatz, wenn durch mangelnde Spannungsqualität die Wiederher
 |Preis|niedrig|mittel|hoch|
 |Anwendung|Kleine Verbraucher|Einzelne Verbraucher|Server und Datenkommuniokation|
 |Umschaltdauer|4ms - 10 ms|2ms - 4ms| / |
+
+S (Scheinleistung in VA) = U * I = P / cosφ
+
+P (Wirkleistung in W) = S * cosφ
+
+cosφ (Leistungsfaktor)
