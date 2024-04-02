@@ -24,3 +24,27 @@ Ziele:
 - Neukunden gewinnen
 - Marktanteil steigern
 - Am Markt bleiben
+
+## Verkaufs- und Einkaufskalkulation
+
+|Verkaufskalkulation|Einkaufskalkulation
+|--|--|
+|= Listeneinkaufspreis brutto pro Stück|= Bruttoverkaufspreis|
+|- Umsatzsteuer|- Umsatzsteuer|
+|= Listeneinkaufspreis netto pro Stück|= Nettoverkaufspreis|
+|- Lieferrabatt|- Kundenrabatt|
+|= Zieleinkaufspreis|= Zielverkaufspreis|
+|- Lieferskonto|- Kundenskonto|
+|= Bareinkaufspreis|= Barverkaufspreis|
+|+ Bezugskosten|- Gewinnzuschlag|
+|= Einstandspreis (Bezugpreis)|= Selbskosten|
+|+ Handlungskostenzuschlag|- Handlungskostenzuschlag|
+|= Selbskosten|= Einstandspreis (Bezugpreis)|
+|+ Gewinnzuschlag|- Bezugskosten|
+|= Barverkaufspreis|= Bareinkaufspreis|
+|+ Kundenskonto|+ Lieferskonto|
+|= Zielverkaufspreis|= Zieleinkaufspreis|
+|+ Kundenrabatt|+ Lieferrabatt|
+|= Nettoverkaufspreis|= Listeneinkaufspreis netto pro Stück|
+|+ Umsatzsteuer|+ Umsatzsteuer|
+|= Bruttoverkaufspreis|= Listeneinkaufspreis brutto pro Stück|
