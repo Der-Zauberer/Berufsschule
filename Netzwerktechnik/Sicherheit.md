@@ -23,7 +23,7 @@ Das BSI wurde von der Bundesregierung  1991 mit dem "Gesetzes über die Errichtu
 - **Phishing:** Unter falschem Namen oder falschem Vorwand werden Informationen erfragt oder Wischen den Zeilen erlangt.
 
 ## Vertraulichkeit, Integrität, Verfügbarkeit, Authentizität (VIVA)
-- **Vertraulichkeit:** Beschreibt die Zugriffsbeschränkung vor unerlaubter Einsicht und Verschlüsselung bei der Übertagung von Daten.
+- **Vertraulichkeit:** Beschreibt die Zugriffsbeschränkung vor unerlaubtem Zugriff (Sicherstellung beispielsweise durch Verschlüsselung von Daten).
 - **Integrität:** Beschreibt den Schutz der Daten vor unerlaubter Veränderung.
 - **Verfügbarkeit:** Beschreibt die Ausfallsicherheit der Datenbereitstellung
 - **Authentizität:** Beschreibt die Zuordbarkeit und Nachvollziehbarkeit von Handlungen
@@ -31,13 +31,13 @@ Das BSI wurde von der Bundesregierung  1991 mit dem "Gesetzes über die Errichtu
 ## Verschlüsselungsverfahren
 
 ### Symmetrische Verschlüsselung
-Bei  Verschlüsselung wird mit dem **gleichen** Schlüssel **verschlüsselt** und **entschlüsselt**. Ein Beispiel hierfür ist die Cäsarverschlüsselung oder Base64.
+Bei  Verschlüsselung wird mit dem **gleichen** Schlüssel **verschlüsselt** und **entschlüsselt**. Ein Beispiel hierfür ist die Cäsarverschlüsselung.
 
 ### Asymmetrische Verschlüsselung
-Bei Verschlüsselung wird mit einem **Public-Key** verschlüsselt und mit dem **Private-Key** entschlüsselt. Hierbei kann der Private-Key verteilt werden, da sich die Nachricht mit ihm nicht verschlüsseln lässt und er keine Rückschlüsse auf den Private-Key zulässt. Ein Beispiel hierfür ist das RSA-Verfahren, bei diesem werden die Keys durch zwei Primzahlen generiert.
+Bei Verschlüsselung wird mit einem **Public-Key** verschlüsselt und mit dem **Private-Key** entschlüsselt. Hierbei kann der Public-Key verteilt werden, da sich die Nachricht mit ihm zwar ver- aber nicht wieder entschlüsseln lässt und er keine Rückschlüsse auf den Private-Key zulässt. Ein Beispiel hierfür ist das RSA-Verfahren, bei diesem werden die Keys durch zwei Primzahlen generiert.
 
 ### Hashing
-Beim Hashing kann nur verschlüsselt werden, es gibt keine Möglichkeit die Nachricht wieder zu entschlüsseln. Dies ist zum Beispiel für Passwörter sinnvoll. Hier werden die Passwörter gehashed gespeichert und beim Login wird das Login-Passwort gehashed mit dem gespeicherten gehashtem Password aus der Datenbank verglichen. Bei Passwörtern ist wichtig, dass es keine Hashkollisionen gibt. Ein Beispiel hierfür ist SHA-256.
+Beim Hashing kann nur eine Hashsumme errechnet werden, es gibt keine Möglichkeit den ursprünglichen Inhalt aus diesem Hash wiederherzustellen. Dies ist zum Beispiel für Passwörter sinnvoll. Hier werden die Passwörter gehashed gespeichert und beim Login wird das Login-Passwort gehashed und nachfolgend mit dem gespeicherten Passworthash aus der Datenbank verglichen. Bei Passwörtern ist wichtig, dass es keine Hashkollisionen gibt. Ein Beispiel für einen aktuellen Hashingalgorithmus ist SHA-256.
 
 ### Sicherheitsvorkehrungen
 - **Monitoring:** Infrastruktur wird über ein System überwacht, welches bei merkwürdigen Verhaltensmustern von Usern, Datenverarbeitungen, zu vielen Zugriffen oder Überlastung, Alarm schlägt.
@@ -46,19 +46,21 @@ Beim Hashing kann nur verschlüsselt werden, es gibt keine Möglichkeit die Nach
 
 ## Firewall
 Eine Firewall ist ein System (Server oder Router), welches in der Lage ist Netzwerkverkehr zu analysieren und gegebenenfalls zu sperren. Für Sperrungen gibt es verschiedene Strategien:
-- Alles erlauben und nur verdächtiges sperren
-- Alles verbieten und nur bekanntes erlauben
+- Alles erlauben und nur verdächtiges sperren (Blacklisting).
+- Alles verbieten und nur bekanntes erlauben (Whitelisting).
 
-### Funktionskomponenten
+### Firewallingtechniken
 - Paketfilter
 - Stateful Packet Inspection
 - Deep Packet Inspection
+
+### NGFW-Häufige Features
 - URL-Filter
 - VPN
 - Content-Filter
-- Network Address Translation
-- Proxyfunktion (Häufige Seiten werden gecached)
-- Passwortsicherung
+- Network Address Translation (Nicht zwingend Firewall-Funktionalität. Eher Gateway/Router, welches häufig in NGFWs integriert.)
+- Proxyfunktion (Proxy übernimmt als "Zwischenstation" Kommunikation mit dem Zielserver im "Auftrag" des Clients. Hierbei kann dann der Traffic überdies gescannt/blockiert werden).
+- Autentifikation (Meist nach 802.1X)
 - Virenscanner
 
 ### Filterung
@@ -70,7 +72,7 @@ Eine Firewall ist ein System (Server oder Router), welches in der Lage ist Netzw
 - **Next Generation Firewalls:** Überprüft auch nach Zertifikaten und Malwaremustern
 
 ## Schutzbedarf
-Hierbei wird analysiert, wie schutzbedürftig ein Unternehmen ist, beziehungsweise was passiert, wenn die VIVA-Zielobjekte verletzt werden. Um dies zu verhindern gibt es Sicherheitsrichtlinien (Security Policy). Sie muss von allen Mitarbeitern des Unternehmens zur Kenntnis genommen werden, eine Verletzung wird sanktioniert und kann durch die DSGVO je nach schwere zu empfindlichen Geldbußen und selbst zu Haftstrafen führen.
+Hierbei wird analysiert, wie schutzbedürftig eine IT-Komponente ist, beziehungsweise was passiert, wenn eine der VIVA-Schutzdefinitionen verletzt werden. Um dies zu verhindern gibt es Sicherheitsrichtlinien (Security Policy). Diese definitiert sowohl Verhaltensregeln der Mitarbeiter, diese müssen von allen Mitarbeitern des Unternehmens zur Kenntnis genommen werden. Eine Vernachlässigung der Sicherungspflicht wird sanktioniert und kann nach DSGVO je nach Schwere der Folgen zu empfindlichen Geldbußen und selbst zu Haftstrafen führen.
 
 Die Schutzbedürftigkeit wird in drei Kategorien angegeben:
 - **Normal: Die Schadensauswirkungen sind begrenzt und überschaubar**
@@ -93,21 +95,21 @@ Der mögliche Schaden ergänzt sich außerdem nach:
 - finanzielle Auswirkungen
 
 Vererbung von Schutzbedarf:
-- **Maximalprinzip:** Der höchste Schutzbedarf aller Anwendungen
-- **Betrachtung von Abhängigkeiten:** Schutzbedarf überträgt sich auf Abhängigkeiten
-- **Kumulationseffekt:** Der Schutzbedarf aller Anwendungen als Verbund kann höher sein als die Anwendungen einzeln beanspruchen
-- **Verteilungseffekt:** Verteilung einer Anwendung mit Schutzbedarf sorgt für ein verteilteres Risiko
+- **Maximalprinzip:** Der höchste Schutzbedarf aller Anwendungen wird auf das Gesamtsystem übernommen.
+- **Betrachtung von Abhängigkeiten:** Schutzbedarf überträgt sich auf Abhängigkeiten.
+- **Kumulationseffekt:** Der Schutzbedarf aller Anwendungen als Verbund kann höher sein als die Anwendungen einzeln beanspruchen.
+- **Verteilungseffekt:** Verteilung einer Anwendung mit Schutzbedarf sorgt für ein verteilteres Risiko, und somit einen geringeren Bedarf der Einzelkomponenten.
 
 ## Backup
 
 ### Vollsicherung
-Eine vollständige Sicherung aller zur sichernden Daten. Eine Vollsicherung ist entsprechend rechenintensiv und kann lange dauern. Außerdem ist die Vollsicherung entsprechend so groß wie die Größe der zu sichernden Daten.
+Eine vollständige Sicherung aller zur sichernden Daten. Eine Vollsicherung ist entsprechend rechenintensiv und kann lange dauern. Außerdem ist die Vollsicherung entsprechend so groß wie die Größe der zu sichernden Daten (oder kleiner durch Kompression).
 
 ### Differenzielle Sicherung
-Eine Sicherung, die alle Änderungen sichert, die seit der letzten Vollsicherung aufgetreten sind. Dieses Vorgehen ist deutlich weniger rechen- und speicherintensiv als die Vollsicherung aber intensiver als die inkrementelle Sicherung. Sie hat jedoch im Gegensatz zur inkrementelle Sicherung den Vorteil, dass nur die Vollsicherung und eine differenzielle Sicherung benötigt wird und Daten im Verlustfall wieder herzustellen.
+Eine Sicherung, die alle Änderungen sichert, die seit der letzten Vollsicherung aufgetreten sind. Dieses Vorgehen ist deutlich weniger rechen- und speicherintensiv als die Vollsicherung aber intensiver als die inkrementelle Sicherung. Sie hat jedoch im Gegensatz zur inkrementelle Sicherung den Vorteil, dass nur die Vollsicherung und eine differenzielle Sicherung benötigt wird und Daten im Verlustfall wieder herzustellen. Daraus ergibt sich jedoch der Nachteil, dass sowohl das im Bezug stehende Vollbackup als auch das differenzielle Backup für eine erfolgreiche Wiederherstellung integer sein muss.
 
 ### Inkrementelle Sicherung
-Eine Sicherung die alle Daten seit der letzten inkrementellen Sicherung oder Vollsicherung falls nicht vorhanden sichert. Diese Sicherung ist durch die Inkrementierungen am wenigsten Rechen- und Speicherintensiv. Eine Wiederherstellung der Daten benötigt aber die Vollsicherung und jede einzelne inkrementelle Sicherung, was die Wiederherstellung in diesem Fall rechenintensiver und aufwändiger macht.
+Eine Sicherung die alle Daten seit der letzten inkrementellen Sicherung oder Vollsicherung falls nicht vorhanden sichert. Diese Sicherung ist durch die Inkrementierungen am wenigsten Rechen- und Speicherintensiv. Eine Wiederherstellung der Daten benötigt aber die Vollsicherung und jede einzelne inkrementelle Sicherung, was die Wiederherstellung in diesem Fall rechenintensiver und aufwändiger macht. Gleichzeitig hat das stark verkette Konzept auch eine starke Erhöhung der "Points of Failure" zur Folge, da jede einzelne Datei auf den "Vorgänger" aufbaut, und somit keine der Dateien defekt sein darf.
 
 ### Großvater Vater Sohn Prinzip
 Dieses Prinzip verbindet alle Backupstrategien miteinander, um eine optimale Balance aus Rechen- und Speicherintensität zu erreichen. Sie kann folgendermaßen ablaufen:
