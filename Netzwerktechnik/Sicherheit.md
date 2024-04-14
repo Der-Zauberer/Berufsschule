@@ -23,7 +23,7 @@ Das BSI wurde von der Bundesregierung  1991 mit dem "Gesetzes über die Errichtu
 - **Phishing:** Unter falschem Namen oder falschem Vorwand werden Informationen erfragt oder Wischen den Zeilen erlangt.
 
 ## Vertraulichkeit, Integrität, Verfügbarkeit, Authentizität (VIVA)
-- **Vertraulichkeit:** Beschreibt die Zugriffsbeschränkung vor unerlaubtem Zugriff (Sicherstellung beispielsweise durch Verschlüsselung von Daten).
+- **Vertraulichkeit:** Beschreibt den Schutz vor unerlaubtem Zugriff (Sicherstellung beispielsweise durch Verschlüsselung von Daten).
 - **Integrität:** Beschreibt den Schutz der Daten vor unerlaubter Veränderung.
 - **Verfügbarkeit:** Beschreibt die Ausfallsicherheit der Datenbereitstellung
 - **Authentizität:** Beschreibt die Zuordbarkeit und Nachvollziehbarkeit von Handlungen
