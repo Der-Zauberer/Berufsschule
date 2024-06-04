@@ -71,3 +71,60 @@ Pflichten  Käufer:
 Pflichten des Verkäufers:
 - Annahme des Kaufpreises
 - Übergabe der Wahre und Übertragen des Eigentums
+
+## Grundbegriffe für Kaufverträge
+
+- **Anfrage**: Unverbindliche Information über Konditionen
+- **Anpreisung**: Unverbindliche Preisinformation
+- **Antrag**: Zuerst abgegebene Willenserklärung
+- **Annahme**: Auf den Antrag folgende Willenserklärung
+- **Angebot**: Antrag eines Verkäufers an den Käufer ein Kaufvertrag abzuschließen
+- **Bestellung**: Annahme oder Antrag des Käufers
+- **Bestellungsannahme**: Zustimmung des Verkäufers an den Käufer
+- **Bindung an den Antrag**: Vertragsbedingungen müssen erfüllt werden
+- **Freizeichnungsklausel**: Einschränkung oder Ausschließen von Vertragsinhalten durch den Verkäufer
+
+## Besitz und Eigentum
+
+||Besitz|Eigentum|
+|---|---|---|
+|Erlaubt ist: |Tatsächliche Herrschaft über eine Sache|Rechtliche Herrschaft|
+|Zweckentsprechende Nutzung|Veräußerung, Veränderung, Vermietung (alles, Eigentum anderer darf nicht beeinträchtigt werden)|
+|Durch:|Leihe, Miete, Pacht, Erwerb, Diebstahl|Erwerb, Erzeugung|
+
+## Liefermängel
+
+Mögliche Liefermängel:
+- Fehlerhafte Liefermenge
+- Abweichung von der vereinbarten Beschaffenheit, Kaputt
+- Falscher Artikel
+- Unbrauchbare Bedienungsanleitung (IKEA Klausel)
+- Abweichung der Werbeaussage
+
+## Kaufmängel Rechte
+
+Zunächst kann der Käufer die vorrangigen Rechte ausschöpfen, wenn diese keine Besserung bringen, dann kann er von den Nachrangigen Rechten gebrauch machen.
+
+Vorrangig:
+- §439 BGB Nacherfüllung Ersatzlieferung
+- §439 BGB Nacherfüllung Nachbesserung
+
+Nachrangig:
+- §437 BGB Rücktritt vom Vertrag
+- §441 BGB Minderung des Kaufpreises
+- Schadenersatz
+
+## Garantie und Gewährleistung
+
+Gewährleistung:
+- Pflicht für gewerbliche Verkäufer
+- Neue Produkte 2 Jahre
+- Gebrauchte Produkte 1 Jahr
+
+Garantie
+- Freiwillige Leistung des Herstellers
+
+Beweislastumkehr
+- Gilt für Gewährleistung
+- Bis einem Jahr muss der Verkäufer das Nichtvorhandensein des Schadens beweisen
+- Ab einem Jahr muss der Käufer das Vorhandensein des Schadens beim Kauf beweisen
