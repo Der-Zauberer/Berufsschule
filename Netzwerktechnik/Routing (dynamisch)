@@ -56,3 +56,55 @@ Die Metrik bestimmt die Erreichbarkeit entfernter Netzwerke und variiert je nach
 
 Reines Distance Vector Routing wird heutzutage in großen Netzen kaum noch eingesetzt, außer in Kombination mit anderen Routingmethoden wie Path-Vector (BGP) oder als Hybrid mit Link State-Routing (EIGRP).
 In mobilen Netzwerken findet es jedoch wieder vermehrt Anwendung.
+
+Auffällig bei diesem Befehl ist, dass die Subnetzmaske in invertierter Schreibweise angegeben wird. Diese Schreibweise wird sonst üblicherweise beim Einrichten von Access-Control-Lists (ACLs) verwendet und wird auch als „Wildcard Mask“ bezeichnet.
+
+## Designated Router in Multiaccess-Netzwerken
+
+Grundsätzlich gilt zu unterscheiden, ob es sich bei der Verbindung der Router um eine Point-to-Point Verbindung oder um ein Multi-Access-Netzwerk handelt. 
+
+Da es in einem Multi-Access-Netzwerken mehrere Nachbarschaften gibt, steigt der LSA-Traffic stark an.
+
+### Verteilung der Rollen
+
+Um den Datenverkehr in einem Link-State Multi-Access-Netzwerk zu senken, wird ein Router zum Designated Router (DR) ernannt. Dieser Router hält als Einziger die komplette Topologie und steuert die LSAs. Zur Ausfallsicherheit wird automatisch ein Backup Designated Router (BDR) angelegt. Alle anderen Router werden als DROTHER bezeichnet und senden ihre Nachrichten nur noch an den Designated Router (DR) und den Backup Designated Router (BDR).
+
+- **Designated Router Multicast:** 224.0.0.5
+- **Backup Designated Router Multicast:** 224.0.0.6
+
+### Wahl des DR und BDR
+
+Um die Wahl des DR und BDR bestimmen zu können, werden verschiedene Kriterien in vorgeschriebener Reihenfolge verwendet:
+
+1. Ermittlung der Priorität
+2. Ermittlung Router ID
+3. Ermittlung der IP-Adresse des Loopback-Interface
+4. Ermittlung der höchsten, eingestellten IP-Adresse an den Router-Interfaces
+
+## OSPF Areas
+
+Die Zahl möglicher Router in einem Netz ist limitiert (ca. 25). Bei größeren Netzen wird daher in Areas unterschieden, die über einen Area Border Router (ABR) miteinander verbunden sind. Alle anderen Router kennen nur ihren ABR und ihre eigene Topologie, aber nicht die anderen Router außerhalb ihrer Area. Somit besitzen alle Router in einer Area dieselbe Link-State Database. 
+
+Von besonderer Hierarchie ist die Area 0 – Backbone Area. Alle anderen Areas müssen direkt oder über einen Virtual Link mit ihr verbunden sein. Änderungen der Topologie in einer Area werden grundsätzlich (nicht automatisch) nicht in eine benachbarte Area verteilt. Der Vorteil besteht darin, dass dadurch eine gute Skalierbarkeit des gesamten Netzwerks entsteht und die Areas, somit auch das gesamte Netzwerk, schneller konvergent wird.
+
+## OSPF Überblick
+
+### Vorteile:
+
+- OSPF ist ein offener Quellsatz, also Lizenzfrei
+- Ein LS-basiertes Routingprotokoll ist per Definition frei von Routingschleifen
+- LS Routing ermöglicht sehr schnelle Netzkonvergenzzeiten (bis unterhalb 100ms)
+- Das DR- und Area-Konzept ermöglicht eine gute Skalierung auch für größere Netze durch Hierarchisierung
+- OSPF unterstützt VLSM und CIDR
+
+### Nachteile:
+
+- CPU und speicherintensives Routing
+- LS-Routing erfordert eine gute Planung/ Design
+- Die Konfiguration kann je nach Anforderung sehr komplex werden
+- Grundsätzliches Problem bei unerwünschter Netzpartitionierung (z.B.: DR/BDR für einzelne Router nicht mehr erreichbar)
+
+### Zusammenfassung:
+
+Beim LS Routing werden nur Topologieinformationen zwischen den Routern ausgetauscht – nicht die Routingtabelle. Hierzu wird der Inhalt der LSDB regelmäßig auf Änderungen überprüft und bei Bedarf aktualisiert. Das beste Beispiel ist hier OSPF.
+
