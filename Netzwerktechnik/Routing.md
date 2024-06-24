@@ -1,4 +1,4 @@
-### Zusammenfassung: Dynamisches Routing
+# Zusammenfassung: Dynamisches Routing
 von Felix Luckow am 24.06.2024
 
 Dynamisches Routing automatisiert die Verwaltung und Verteilung von Routinginformationen, wodurch der administrative Aufwand reduziert und die Ausfallsicherheit in großen Netzwerken erhöht wird. Router tauschen dabei Informationen aus, um entfernte Netzwerke zu finden, Routinginformationen aktuell zu halten, Routen zu bewerten und den besten Pfad zu wählen.
