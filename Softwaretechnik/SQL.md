@@ -163,3 +163,35 @@ SELECT id FROM Lehrer WHERE id IN (SELECT lehrer FROM Schueler);
 SELECT id FROM Schueler WHERE note = (SELECT max(note) FROM Schueler);
 ```
 
+
+## Primary Keys
+
+Ein Primary Key (Primärschlüssel) ist eine Spalte oder eine Kombination von Spalten in einer Tabelle, die jeden Datensatz eindeutig identifiziert. Die Primärschlüssel-Bedingungen umfassen:
+
+- **Eindeutigkeit**: Jeder Wert in der Primärschlüssel-Spalte muss eindeutig sein.
+- **Nicht-Null**: Kein Wert in der Primärschlüssel-Spalte darf NULL sein.
+- **Automatische Indizierung**: MySQL erstellt automatisch einen Index für den Primärschlüssel, um die Abfrageleistung zu verbessern.
+
+```sql
+-- Beispiel für eine Tabellenerstellung mit direkter Angabe eines Primary Keys
+CREATE TABLE Lehrer (id INT AUTO_INCREMENT, vorname VARCHAR(50) NOT NULL, nachname VARCHAR(100) NOT NULL, PRIMARY KEY (id);
+
+-- Beispiel für ein ALTER TABLE Statement, welches den PK erst nach der Erstellung der Tabelle festlegt
+ALTER TABLE Lehrer ADD PRIMARY KEY (id);
+```
+
+## Foreign Keys
+
+Ein Foreign Key (Fremdschlüssel) ist eine Spalte oder eine Kombination von Spalten, die auf den Primärschlüssel einer anderen Tabelle verweist. Die Fremdschlüssel-Bedingungen umfassen:
+
+- **Referenzielle Integrität**: Der Wert eines Fremdschlüssels muss entweder einem Wert des referenzierten Primärschlüssels entsprechen oder NULL sein.
+- **Verknüpfung von Tabellen**: Fremdschlüssel ermöglichen die Verknüpfung und Konsistenz zwischen Tabellen.
+
+
+```sql
+-- Beispiel für eine Tabellenerstellung mit direkter Angabe von PK und FKs
+CREATE TABLE Lehrer (lehrer_id INT AUTO_INCREMENT, klasse_id INT, PRIMARY KEY (lehrer_id), FOREIGN KEY (klasse_id) REFERENCES klasse(id));
+
+-- Beispiel für ein ALTER TABLE Statement, welches den FK erst nach der Erstellung der Tabelle festlegt
+ALTER TABLE Lehrer ADD CONSTRAINT fk_klasse FOREIGN KEY (klasse_id) REFERENCES klasse(id);
+```
