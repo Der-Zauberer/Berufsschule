@@ -3,9 +3,9 @@ von André Sommer am 11.06.2024
 
 ## Wahlen
 
-| Aktives Wahlrecht    | Passives Wahlrecht  |
-|----------------------|---------------------|
-| Jeder darf wählen    | Jeder ist wählbar   |
+|Aktives Wahlrecht|Passives Wahlrecht|
+|---|---|
+|Jeder darf wählen|Jeder ist wählbar|
 
 Wahlvoraussetzungen:
 - Deutsche Staatsangehörigkeit
