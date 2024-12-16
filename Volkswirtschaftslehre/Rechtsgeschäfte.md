@@ -128,3 +128,47 @@ Beweislastumkehr
 - Gilt für Gewährleistung
 - Bis einem Jahr muss der Verkäufer das Nichtvorhandensein des Schadens beweisen
 - Ab einem Jahr muss der Käufer das Vorhandensein des Schadens beim Kauf beweisen
+
+## Verbraucherschutz Informationsbeschaffung
+- Verbraucherschutzstelle Beratung
+- Verbraucherschutz Vergleiche (zum Beispiel Stiftung Warentest)
+- Tageszeitungen
+- Fachzeitschriften
+
+Eine Verbraucherschutzstelle ich eine zumeist öffentlich finanzierte und gemeinnützige Organisation.
+
+## Fernabsatz und Widerruf
+
+Ein Fernabsatz ist jeder Vertrag, der nicht persönlich sondern über Telekommunikationsmittel geschlossen wird. Dazu zählt zum Beispiel Telefon oder eine Internetbestellung. Bei Fernabsatzverträgen gilt das Widerrufsrecht.
+
+Folgendes gilt beim Widerrufsrecht:
+- Widerrufsfrist 14 Tage ab Bestellung oder Erhalt der Wahre und spätestens nach Widerrufsbelehrung
+- Widerrufsbelehrung seitens des Händlers notwendig
+- Kosten für Rücksendungen übernimmt der Händler
+- Bei Widerruf wird die Wahre zurück geschickt und der Kunde erhält sein Geld zurück
+- Widerruf muss dem Händler bei Inanspruchnahme mitgeteilt werden.
+
+Ausnahmen des Widerrufsrechts:
+- Individuelle Anfertigungen
+- Schnell verderbliche Ware
+- Versiegelte Ware, die wegen Hygiene oder Gesundheitschutz vom Umtausch ausgeschlossen ist
+- Ware die nach der Lieferung mit anderen Gütern vermischt wird
+- Alkoholische Getränke mit Preisschwankungen ohne Einfluss des Händlers und Lieferung zu einem späteren Zeitpunkt
+- Versiegelte Ton- oder Videoaufnahmen und Computersoftware
+- Zeitschriften und Illustrierten mit Ausnahme von Abonnements
+- Produkte mit starken Preisschwankungen ohne Einfluss des Händlers
+- Versteigerungen
+- Glücksspiel
+- Notariell beglaubigte Urkunden
+
+## Allgemeine Geschäftsbedingungen
+Allgemeine Geschäftsbedingungen sind vorformulierte Kaufverträge.
+
+Folgendes gilt für Allgemeine Geschäftsbedingungen:
+- Individuelle Absprachen haben Vorrang vor den AGBs
+- Händler muss bei Vertragsschluss auf die AGBs hinweisen und Kunde muss sie Annehmen
+
+Nicht erlaubt in den Allgemeine Geschäftsbedingungen:
+- Überraschende Klauseln, mit denen der Kunde nicht rechnen kann
+- Verteuerung mit Nachzahlung zu einem späteren Zeitpunkt
+- Ausschluss von Teilen der gesetzlichen Gewährleistung
