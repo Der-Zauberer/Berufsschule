@@ -3,14 +3,12 @@ von André Sommer am 16.12.2024
  
 ## Anlageformen
  
-Der Anleger muss abwägen zwischen **Liquidität**, und **Rentabilität** **Sicherheit**. Dabei fällt ein Vorteil eines Anlagezieles oft zu lasten eines anderen. Liquidität stellt die Verfügbarkeit der Anlage dar, also wie schnell Geld zu Verfügung steht und ob es ohne Verlusste ausgelößt werden kann. Rentabilitt stellt die Rendite, also den zu erwartenden Gewinn der Anlage dar. Die Sicherheit beschreibt die Wahrscheinlichkeit einer Wertminderung oder eines Wertverlustes der Anlage.
+Der Anleger muss abwägen zwischen **Liquidität**, **Rentabilität** und **Sicherheit** entscheiden. Dabei fällt ein Vorteil eines Anlagezieles oft zu lasten eines anderen. Liquidität stellt die Verfügbarkeit der Anlage dar, also wie schnell Geld zu Verfügung steht und ob es ohne Verlusste ausgelößt werden kann. Rentabilitt stellt die Rendite, also den zu erwartenden Gewinn der Anlage dar. Die Sicherheit beschreibt die Wahrscheinlichkeit einer Wertminderung oder eines Wertverlustes der Anlage.
 
 Anlageformen (Beispiele aus dem Buch):
-- **Termingeld (Festgeld):** Fester Verzinste Anlage, die zu einem festen Zeitpunkt ausgeschüttet wird
-- **Kündigungsgeld (Festgeld):** Variabler Zinssatz, der beliebig gekündigt werden kann
+- **Termingeld (Festgeld):** Fest Verzinste Anlage, die zu einem festen Zeitpunkt ausgeschüttet wird
+- **Kündigungsgeld (Festgeld):** Variabler Zinssatz, das beliebig gekündigt werden kann
 - **Aktienfonds:** Zusammenschluss von vielen Einzelaktien zur Risikostreuung ohne Stimmrecht bei Aktionärsversammlungen
-
-Anlageformen
  
 ## Kredite
  
