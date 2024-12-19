@@ -47,6 +47,6 @@ Begrifflichkeiten:
  
 ## Sicherheiten
 
-- **Sicherungsübereignung:** Neben dem Kreditvertrag wird ein Sicherungsübereignungsvertrag geschlossen. Der Kredit ist an eine Wahre gebunden. Kann der Kredit nicht bedient werden wird von der Bank die Ware eingezogen.
+- **Sicherungsübereignung:** Neben dem Kreditvertrag wird ein Sicherungsübereignungsvertrag geschlossen. Der Kredit ist an eine Ware gebunden. Kann der Kredit nicht bedient werden wird von der Bank die Ware eingezogen.
 - **Bürgschaftsvertrag:** Neben dem Kreditvertrag wird ein Bürgschaftsvertrag geschlossen. Wenn der Kredit nicht bedient werden kann bürgt der Bürge für die Restschuld und hat ein Anspruch auf Rückforderung beim Kreditnehmer, sollte dieser später wieder liquide sein.
 - **Lohnabtretung:** Neben dem Kreditvertrag wird ein Lohnabtretungsvertrag geschlossen. Wenn der Kredit nicht bedient werden kann wird ein Teil des Gehaltes gepfändet und einbehalten.
